@@ -22,6 +22,10 @@
  Documentation available at http://cookiecuttr.com
  
  */
+odoo.define('website_cookie_notice.website_cookie_notice', function (require) {
+
+var ajax = require('web.ajax');
+
 (function ($) {
     $.cookieCuttr = function () {
         var defaults = {
@@ -40,7 +44,7 @@
             cookieNoMessage: false, // change to true hide message from all pages apart from your policy page
             cookieDomain: ""
         };
-        openerp.jsonRpc("/cookie_notice/get_config", 'call', {})
+        ajax.jsonRpc("/cookie_notice/get_config", 'call', {})
         .then(function (options) {
             var options = $.extend(defaults, options);
             var message = options.cookieMessage.replace('{{cookiePolicyLink}}', options.cookiePolicyLink);
@@ -278,3 +282,5 @@
         });
     };
 })(jQuery);
+
+});
