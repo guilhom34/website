@@ -5,7 +5,7 @@
 {
     "name": "Multiple Images in Website",
     "summary": "Templates to display multiple images in website views",
-    "version": "8.0.1.0.0",
+    "version": "9.0.1.0.0",
     "author": "Antiun Ingeniería, S.L., "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
