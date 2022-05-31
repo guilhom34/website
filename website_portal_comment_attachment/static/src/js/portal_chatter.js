@@ -3,6 +3,7 @@ odoo.define('website_portal_comment_attachment.chatter', function (require) {
     var core = require('web.core');
     var ajax = require('web.ajax');
     var PortalChatter = require('portal.chatter').PortalChatter;
+    var _t = core._t;
 
     PortalChatter.include({
         _loadTemplates: function(){
@@ -32,8 +33,8 @@ odoo.define('website_portal_comment_attachment.chatter', function (require) {
                 var abort_btn = document.createElement('button');
                 abort_btn.className = 'btn';
                 abort_btn.textContent = '×';
-                abort_btn.title = 'Remove attachment';
-                abort_btn.type = 'button';
+                abort_btn.title = _t('Remove attachment');
+                abort_btn.type = _t('button');
                 abort_btn.onclick = abort ;
 
                 var item = document.createElement('li');
